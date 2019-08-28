@@ -2,10 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BlackJack</title>
+  <link rel="stylesheet" href="css/styles.css">
   <script defer src="js/main.js"></script>
 </head>
 <body>
-  
+  <h1 class="text-center"><strong>Black</strong><span class="salmon">Jack</span></h1>
+  <h2 class='title text-center'>Amount of decks in the game:</h2>
+  <div class="flex justify-center margin-bottom">
+    <button class="btn decks-btn">1</button>
+    <button class="btn decks-btn">2</button>
+    <button class="btn decks-btn">4</button>
+    <button class="btn decks-btn active">6</button>
+    <button class="btn decks-btn">8</button>
+  </div>
+  <h2 class="title text-center">Special cases:</h2>
+  <div class="flex justify-center margin-bottom">
+    <button class="btn special-cases-btn">9/9</button>
+    <button class="btn special-cases-btn">A/A</button>
+    <button class="btn special-cases-btn">A/6</button>
+    <button class="btn special-cases-btn">A/7</button>
+  </div>
+  <div class="flex margin-bottom">
+   <div class="line flex justify-center">
+      <label class="input-title" for="scoreInput">Score of the current hand:</label>
+    </div>
+    <div class="line flex justify-center margin-bottom">
+      <button class="btn one">-</button>
+      <input id='scoreInput' placeholder='Score of the hand' type="number" class="data-input">
+      <button class="btn one">+</button>    
+    </div>
+    <div class="line flex justify-center">
+      <label class="input-title" for="tableCardsInput">Amount of cards on the table:</label>
+    </div>
+    <div class="line flex justify-center margin-bottom">
+      <button class="btn one">-</button>
+      <input id='tableCardsInput' placeholder="Cards on the table" type="number" class="data-input">
+      <button class="btn one">+</button>
+    </div>
+  </div>
+  <div class="flex justify-center">
+    <div id='regularOut' class="output text-center margin-bottom"></div>
+    <div id='doubleOut' class="output text-center margin-bottom"></div>
+    <div id='splitOut' class="output text-center margin-bottom"></div>
+  </div>
 </body>
 </html>
